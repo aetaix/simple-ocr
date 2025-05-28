@@ -1,7 +1,7 @@
 import { MISTRAL_API_KEY } from '$env/static/private';
 import { Mistral } from '@mistralai/mistralai';
 import { responseFormatFromZodObject } from '@mistralai/mistralai/extra/structChat.js';
-import { DocumentSchema } from './schema';
+import { DocumentSchema } from '$lib/schema';
 // @ts-ignore
 import { Buffer } from 'node:buffer';
 

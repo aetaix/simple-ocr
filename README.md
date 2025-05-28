@@ -1,22 +1,31 @@
-# sv
+# Simple Document AI boilerplate
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This is a simple boilerplate for a document AI application. It uses Mistral Document AI to extract information from documents.
+Built with SvelteKit and TailwindCSS.
 
-## Creating a project
+## Getting Started
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. Clone the repository
+2. Change .env.example to .env and add your Mistral API key
+3. Install dependencies with `npm install`
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Customizing Document Annotation
 
-# create a new project in my-app
-npx sv create my-app
+You can customize the document annotations by editing the `src/lib/schema.ts` file.
+This schema use Zod to define the structure of the annotations you want to extract from the document.
+
+```ts
+const documentSchema = z.object({
+	sections: z.array(
+		z.object({
+			title: z.string(),
+			content: z.string()
+		})
+	)
+});
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Running the app
 
 ```bash
 npm run dev
@@ -35,4 +44,4 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+> This app is a simple boilerplate and is not meant to be used in production.
