@@ -6,7 +6,7 @@ Built with SvelteKit and TailwindCSS.
 ## Getting Started
 
 1. Clone the repository
-2. Change .env.example to .env and add your Mistral API key
+2. Change .env.example to .env and add your [Mistral API key](https://console.mistral.ai/)
 3. Install dependencies with `npm install`
 
 ## Customizing Document Annotation
